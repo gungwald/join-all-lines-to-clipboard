@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.alteredmechanism.apps</groupId>
-	<artifactId>join-all-lines-to-clipboard</artifactId>
+	<artifactId>join-lines</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Join All Lines to Clipboard</name>
+	<name>Join Lines</name>
 	<packaging>jar</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,7 +48,7 @@
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>libs/</classpathPrefix>
 							<mainClass>
-								JoinAllLinesToClipboard
+								LineJoiner
 							</mainClass>
 						</manifest>
 					</archive>
