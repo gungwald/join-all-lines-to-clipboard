@@ -1,3 +1,4 @@
+package com.alteredmechanism.apps;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -48,11 +49,15 @@ public class LineJoiner {
 
 	public void joinLines(BufferedReader in) throws IOException {
 		try {
+			StringBuffer joinedLines = new StringBuffer();
 			String line;
 			while ((line = in.readLine()) != null) {
-                System.out.print(line.trim());
-                System.out.print(' ');
+                joinedLines.append(line.trim()).append(' ');
 			}
+			// Delete unnecessary trailing space.
+			joinedLines.deleteCharAt(joinedLines.length() - 1);
+			copyToClipboard(joinedLines.toString());
+			System.out.println(joinedLines);
 		} 
         finally {
 			in.close();
@@ -63,7 +68,5 @@ public class LineJoiner {
 		StringSelection selection = new StringSelection(text);
 		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 		clipboard.setContents(selection, selection);
-		System.out.println(text);
 	}
-    
 }
