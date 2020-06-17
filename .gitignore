@@ -1,6 +1,9 @@
 target/
 *.class
 
+# VIM swap files
+*.swp
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 

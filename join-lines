@@ -15,7 +15,7 @@ do
 		EXECUTABLE_JAR=`ls "$BIN_DIR"/target/"$PROGRAM_NAME"*.jar | tail -1`
 		exec java -jar "$EXECUTABLE_JAR" "$@"
 	else
-		printf "Program jar not found. Do you want to build it\? (y/n) "
+		printf "$PROGRAM_NAME: program jar not found. Do you want to build it\? (y/n) "
 		read ANSWER
 		if [ "$ANSWER" = "y" ]
 		then

@@ -30,7 +30,7 @@
             <directory>${project.build.scriptSourceDirectory}</directory>
             <outputDirectory></outputDirectory>
             <includes>
-                <include>join-lines.*</include>
+                <include>*</include>
             </includes>
         </fileSet>
         <!--

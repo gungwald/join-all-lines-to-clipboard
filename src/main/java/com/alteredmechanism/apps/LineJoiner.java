@@ -56,8 +56,8 @@ public class LineJoiner {
 			}
 			// Delete unnecessary trailing space.
 			joinedLines.deleteCharAt(joinedLines.length() - 1);
-			copyToClipboard(joinedLines.toString());
 			System.out.println(joinedLines);
+			copyToClipboard(joinedLines.toString());
 		} 
         finally {
 			in.close();
